@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "OneDrive Manual Scraper",
+  "version": "2.0",
+  "description": "Records clicks on OneDrive files to scrape durations.",
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.sharepoint.com/*", "https://*.onedrive.live.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
